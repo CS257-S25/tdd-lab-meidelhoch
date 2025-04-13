@@ -1,3 +1,7 @@
+'''
+This file contains testing code for the functions in production.py.
+'''
+
 import sys
 import unittest
 from io import StringIO
@@ -5,10 +9,10 @@ from production import reverse_word, reverse_all_words, main
 
 
 class TestReverseWord(unittest.TestCase):
-    '''
-	Tests for the reverse_word function.
-	'''
     def test_reverse(self):
+        '''
+		Tests for the reverse_word function.
+		'''
         self.assertEqual(reverse_word("superman"),
                          "namrepus", "Should be namrepus")
         self.assertEqual(reverse_word("octopus"),
@@ -19,10 +23,10 @@ class TestReverseWord(unittest.TestCase):
 
 
 class TestReverseAllWords(unittest.TestCase):
-    '''
-	Tests for the reverse_all_words function.
-	'''
     def test_reverse_all_words(self):
+        '''
+		Tests for the reverse_all_words function.
+		'''
         self.assertEqual(reverse_all_words("superman octopus"),
                          "namrepus supotco", "Should be namrepus supotco")
         self.assertEqual(reverse_all_words("a B c"),
@@ -37,10 +41,10 @@ class TestReverseAllWords(unittest.TestCase):
 
 
 class TestReverseUserInput(unittest.TestCase):
-    '''
-	Tests for taking in command line input and reversing it.
-	'''
     def test_reverse_user_input(self):
+        '''
+		Tests for taking in command line input and reversing it.
+		'''
         sys.argv = ['production.py', 'this is a test']
         sys.stdout = StringIO()
         main()
