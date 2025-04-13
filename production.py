@@ -1,3 +1,7 @@
+'''
+This file contains code for reversing an individual word and reversing words in a string of words.
+'''
+
 import sys
 
 
