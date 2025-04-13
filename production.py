@@ -1,9 +1,5 @@
 import sys
 
-'''
-A file for the production code
-'''
-
 
 def reverse_word(word):
     '''
@@ -16,6 +12,9 @@ def reverse_word(word):
 
 
 def reverse_all_words(words):
+    '''
+    A function that reverses all words in a string.
+    '''
     words_array = words.split(" ")
     reversed_words = [reverse_word(word) for word in words_array]
     return " ".join(reversed_words)
