@@ -10,12 +10,13 @@ from production import reverse_word, reverse_all_words, main
 
 class TestReverseWord(unittest.TestCase):
     '''
-	Extends unittest.TestCase to test the reverse_word function.
-	'''
+        Extends unittest.TestCase to test the reverse_word function.
+        '''
+
     def test_reverse(self):
         '''
-		Tests for the reverse_word function.
-		'''
+                Tests for the reverse_word function.
+                '''
         self.assertEqual(reverse_word("superman"),
                          "namrepus", "Should be namrepus")
         self.assertEqual(reverse_word("octopus"),
@@ -27,12 +28,13 @@ class TestReverseWord(unittest.TestCase):
 
 class TestReverseAllWords(unittest.TestCase):
     '''
-	Extends unittest.TestCase to test the reverse_all_words function.
-	'''
+        Extends unittest.TestCase to test the reverse_all_words function.
+        '''
+
     def test_reverse_all_words(self):
         '''
-		Tests for the reverse_all_words function.
-		'''
+                Tests for the reverse_all_words function.
+                '''
         self.assertEqual(reverse_all_words("superman octopus"),
                          "namrepus supotco", "Should be namrepus supotco")
         self.assertEqual(reverse_all_words("a B c"),
@@ -48,12 +50,13 @@ class TestReverseAllWords(unittest.TestCase):
 
 class TestReverseUserInput(unittest.TestCase):
     '''
-	Extends unittest.TestCase to test taking in command line input.
-	'''
+        Extends unittest.TestCase to test taking in command line input.
+        '''
+
     def test_reverse_user_input(self):
         '''
-		Tests for taking in command line input and reversing it.
-		'''
+                Tests for taking in command line input and reversing it.
+                '''
         sys.argv = ['production.py', 'this is a test']
         sys.stdout = StringIO()
         main()
@@ -67,7 +70,7 @@ class TestReverseUserInput(unittest.TestCase):
         printed_output = sys.stdout.getvalue()
         self.assertEqual(printed_output, "Please provide a string to reverse.\n",
                          "Should be Please provide a string to reverse.\n")
-        
+
         sys.argv = ['production.py', 'first string', 'second string']
         sys.stdout = StringIO()
         main()
