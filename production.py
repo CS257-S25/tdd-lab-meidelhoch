@@ -28,7 +28,7 @@ def main():
     '''
     A function that reverses all words in a string from command line input.
     '''
-    if len(sys.argv) > 1:
+    if len(sys.argv) == 2:
         words = sys.argv[1]
         reversed_words = reverse_all_words(words)
         print(reversed_words)

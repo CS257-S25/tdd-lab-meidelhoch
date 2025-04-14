@@ -67,3 +67,10 @@ class TestReverseUserInput(unittest.TestCase):
         printed_output = sys.stdout.getvalue()
         self.assertEqual(printed_output, "Please provide a string to reverse.\n",
                          "Should be Please provide a string to reverse.\n")
+        
+        sys.argv = ['production.py', 'first string', 'second string']
+        sys.stdout = StringIO()
+        main()
+        printed_output = sys.stdout.getvalue()
+        self.assertEqual(printed_output, "Please provide a string to reverse.\n",
+                         "Should be Please provide a string to reverse.\n")
